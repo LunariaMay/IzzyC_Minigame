@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
         lives += value;
         if (lives <= 0)
         {
-            Debug.Log("Game Over! You were killed :(");
+            Debug.Log("Game Over! The garden was destroyed! :(");
             lives = 0;
         }
         Debug.Log("Lives = " + lives);

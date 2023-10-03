@@ -8,10 +8,14 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float topBound = 30;
     private float lowerBound = -14;
 
+    // Declares GameManager variable - DELETE IF IT DOESNT WORK OUT
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        // References the GameManager variable - DELETE IF IT DOESNT WORK OUT
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -24,7 +28,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < lowerBound)
         {
-            Debug.Log("Game Over! They destroyed your garden :(");
+            gameManager.AddLives(-1);
+            // Debug.Log("Game Over! Your garden was destroyed! :("
             Destroy(gameObject);
         }
     }

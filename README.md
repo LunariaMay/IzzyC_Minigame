@@ -1,4 +1,4 @@
-# IzzyC_Minigame
+# Garden Defense
 
 ~~~~~~~~~~~~~~
 Garden Defense
